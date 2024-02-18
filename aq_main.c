@@ -1079,6 +1079,7 @@ static int aq_hw_capabilities(struct aq_dev *softc)
 	case AQ_DEVICE_ID_D107:
 	case AQ_DEVICE_ID_AQC107:
 	case AQ_DEVICE_ID_AQC107S:
+	case AQ_DEVICE_ID_AQC113:
 		softc->media_type = AQ_MEDIA_TYPE_TP;
 		softc->link_speeds = AQ_LINK_ALL;
 		break;
@@ -1096,7 +1097,6 @@ static int aq_hw_capabilities(struct aq_dev *softc)
 	case AQ_DEVICE_ID_AQC109:
 	case AQ_DEVICE_ID_AQC109S:
 	case AQ_DEVICE_ID_AQC112:
-    case AQ_DEVICE_ID_AQC113:
 	case AQ_DEVICE_ID_AQC112S:
 		softc->media_type = AQ_MEDIA_TYPE_TP;
 		softc->link_speeds = AQ_LINK_ALL & ~(AQ_LINK_10G | AQ_LINK_5G);
